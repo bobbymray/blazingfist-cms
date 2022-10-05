@@ -12,7 +12,7 @@ import {
   MdWarning
 } from 'react-icons/md'
 
-const previewBaseURL = 'https://example.com'
+const previewBaseURL = 'https://blazingfist.netlify.app'
 
 const previewTypes = {
   collectionIndex: {
