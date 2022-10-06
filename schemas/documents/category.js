@@ -1,6 +1,6 @@
 export default {
-  name: 'post',
-  title: 'Post',
+  name: 'category',
+  title: 'Category',
   type: 'document',
   fields: [
     {
@@ -26,24 +26,6 @@ export default {
       rows: 4
     },
     {
-      name: 'content',
-      title: 'Content',
-      type: 'ptLoaded'
-    },
-    {
-      name: 'categories',
-      title: 'Categories',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: [
-            { type: 'category' }
-          ]
-        }
-      ]
-    },
-    {
       name: 'picture',
       title: 'Featured Image',
       type: 'picture',
@@ -54,7 +36,8 @@ export default {
     select: { title: 'title', slug: 'slug.current' },
     prepare: ({ slug, title }) => ({
       title,
-      subtitle: `/blog/${slug}/`
+      subtitle: `/blog/category/${slug}/`
     })
   }
 }
+

@@ -3,11 +3,12 @@ import Iframe from 'sanity-plugin-iframe-pane'
 
 // Icons
 import {
+  MdArticle,
   MdBookmark,
+  MdCategory,
   MdHome,
   MdLanguage,
   MdMenu,
-  MdSearch,
   MdSettings,
   MdWarning
 } from 'react-icons/md'
@@ -60,13 +61,14 @@ export default () =>
 
       S.listItem()
         .title('Blog')
-        .icon(MdMenu)
+        .icon(MdArticle)
         .child(
           S.list()
             .title('Blog')
             .items([
               singleDoc('Index', 'collectionIndex', MdHome),
-              multiDoc('Posts', 'post', MdMenu)
+              multiDoc('Posts', 'post', MdArticle),
+              multiDoc('Categories', 'category', MdCategory)
             ])
         ),
 
