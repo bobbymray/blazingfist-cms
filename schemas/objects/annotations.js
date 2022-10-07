@@ -33,11 +33,11 @@ export const internalLink = {
       type: 'reference',
       title: 'Page to link to',
       to: [
+        { type: 'blog' },
         { type: 'category' },
         { type: 'collectionIndex' },
         { type: 'home' },
-        { type: 'page' },
-        { type: 'post' }
+        { type: 'page' }
       ],
       validation: Rule => Rule.required()
     }

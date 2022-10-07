@@ -67,7 +67,7 @@ export default () =>
             .title('Blog')
             .items([
               singleDoc('Index', 'collectionIndex', MdHome),
-              multiDoc('Posts', 'post', MdArticle),
+              multiDoc('Blogs', 'blog', MdArticle),
               multiDoc('Categories', 'category', MdCategory)
             ])
         ),

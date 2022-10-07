@@ -3,12 +3,12 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 
 // Documents
 
+import blog from './documents/blog'
 import category from './documents/category'
 import collectionIndex from './documents/collectionIndex'
 import home from './documents/home'
 import page from './documents/page'
 import pageNotFound from './documents/pageNotFound'
-import post from './documents/post'
 import siteSettings from './documents/siteSettings'
 
 // Objects
@@ -23,12 +23,12 @@ export default createSchema({
   types: schemaTypes.concat([
 
     // Documents
+    blog,
     category,
     collectionIndex,
     home,
     page,
     pageNotFound,
-    post,
     siteSettings,
 
     // Objects
