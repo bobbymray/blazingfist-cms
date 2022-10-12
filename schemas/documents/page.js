@@ -26,9 +26,10 @@ export default {
       rows: 4
     },
     {
-      name: 'content',
+      name: 'sections',
       title: 'Content',
-      type: 'ptLoaded'
+      type: 'array',
+      of: [{ type: 'section' }]
     },
     {
       name: 'picture',

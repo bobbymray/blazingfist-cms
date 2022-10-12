@@ -4,9 +4,10 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'content',
+      name: 'sections',
       title: 'Content',
-      type: 'ptLoaded'
+      type: 'array',
+      of: [{ type: 'section' }]
     }
   ],
   preview: {

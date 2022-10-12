@@ -9,6 +9,7 @@ export default {
       ...pt
     },
     { type: 'picture' },
+    { type: 'quote' },
     { type: 'youtube' }
   ]
 }
