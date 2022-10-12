@@ -20,6 +20,11 @@ export default {
       type: 'string'
     },
     {
+      name: 'publishDate',
+      title: 'Publish Date',
+      type: 'date'
+    },
+    {
       name: 'summary',
       title: 'Summary',
       type: 'text',
@@ -51,11 +56,41 @@ export default {
     }
   ],
   preview: {
-    select: { title: 'title', slug: 'slug.current' },
-    prepare: ({ slug, title }) => ({
+    select: { date: 'publishDate', title: 'title' },
+    prepare: ({ date = 'No Publish Date Entered', title }) => ({
       title,
-      subtitle: `/blog/${slug}/`
+      subtitle: date
     })
-  }
+  },
+  orderings: [
+    {
+      title: 'Publish Date, Newest',
+      name: 'dateDesc',
+      by: [
+        { field: 'publishDate', direction: 'desc' }
+      ]
+    },
+    {
+      title: 'Publish Date, Oldest',
+      name: 'dateAsc',
+      by: [
+        { field: 'publishDate', direction: 'asc' }
+      ]
+    },
+    {
+      title: 'Title, A-Z',
+      name: 'titleAsc',
+      by: [
+        { field: 'title', direction: 'asc' }
+      ]
+    },
+    {
+      title: 'Title, Z-A',
+      name: 'titleDesc',
+      by: [
+        { field: 'title', direction: 'desc' }
+      ]
+    }
+  ]
 }
 
