@@ -28,7 +28,7 @@ const previewTypes = {
     hasSlug: true,
     permalinkBase: ''
   },
-  post: {
+  blog: {
     hasSlug: true,
     permalinkBase: 'blog'
   }
@@ -82,7 +82,10 @@ export default () =>
             .title('Global')
             .items([
               singleDoc('Settings / SEO', 'siteSettings', MdSettings),
-              singleDoc('404 Page', 'pageNotFound', MdWarning)
+              singleDoc('404 Page', 'pageNotFound', MdWarning),
+              S.divider(),
+              singleDoc('Menu - Header', 'navHeader', MdMenu),
+              singleDoc('Menu - Footer', 'navFooter', MdMenu)
             ])
         )
     ])
