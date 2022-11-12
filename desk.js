@@ -9,6 +9,7 @@ import {
   MdHome,
   MdLanguage,
   MdMenu,
+  MdSearch,
   MdSettings,
   MdWarning
 } from 'react-icons/md'
@@ -85,7 +86,9 @@ export default () =>
               singleDoc('404 Page', 'pageNotFound', MdWarning),
               S.divider(),
               singleDoc('Menu - Header', 'navHeader', MdMenu),
-              singleDoc('Menu - Footer', 'navFooter', MdMenu)
+              singleDoc('Menu - Footer', 'navFooter', MdMenu),
+              S.divider(),
+              singleDoc('Search Index', 'searchIndex', MdSearch)
             ])
         )
     ])

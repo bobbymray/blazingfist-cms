@@ -11,6 +11,7 @@ import navFooter from './documents/navFooter'
 import navHeader from './documents/navHeader'
 import page from './documents/page'
 import pageNotFound from './documents/pageNotFound'
+import searchIndex from './documents/searchIndex'
 import siteSettings from './documents/siteSettings'
 
 // Objects
@@ -36,6 +37,7 @@ export default createSchema({
     navHeader,
     page,
     pageNotFound,
+    searchIndex,
     siteSettings,
 
     // Objects
